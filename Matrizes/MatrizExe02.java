@@ -15,7 +15,7 @@ public class MatrizExe02 {
 
                
 
-                    numeroDigitado = Integer.parseInt(JOptionPane.showInputDialog("Digita as notas do " + (i + 1) + " aluno: "));
+                    numeroDigitado = Double.parseDouble(JOptionPane.showInputDialog("Digita as notas do " + (i + 1) + " aluno: "));
                     notas[i][j] = numeroDigitado;
                     
 
@@ -28,19 +28,40 @@ public class MatrizExe02 {
 
         }
 
-        media[0] = 3 / (notas[0][0] + notas[0][1] + notas[0][2]);
-        media[1] = 3 / (notas[1][0] + notas[1][1] + notas[1][2]);
-        media[2] = 3 / (notas[2][0] + notas[2][1] + notas[2][2]);
+        media[0] = (notas[0][0] + notas[0][1] + notas[0][2]) / 3;
+        media[1] = (notas[1][0] + notas[1][1] + notas[1][2]) / 3;
+        media[2] = (notas[2][0] + notas[2][1] + notas[2][2]) / 3;
 
         for(int i = 0; i < 3; i++) {
             System.out.print("notas do aluno " + (i + 1) + " : ");
             for(int j = 0; j < 3; j++) {
 
-                System.out.print(notas[i][j] + " ");
+                System.out.print(notas[i][j] + "   ");
 
             }
 
             System.out.println(" ");
+            System.out.println("media aluno " + (i + 1) + "  :  " + media[i]);
+
+            if(media[i] >= 6) {
+
+                System.out.println("Aprovado!");
+                System.out.println(" ");
+                
+
+            }else if(media[i] >= 2){
+
+                System.out.println("Recuperacao!");
+                System.out.println(" ");
+
+            }else{
+
+                System.out.println("Reprovado");
+                System.out.println(" ");
+
+            }
+
+           
 
         }   
 
