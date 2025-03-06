@@ -36,6 +36,10 @@ public class Materias {
         somaHoras = somaHoras + qtdHoras;
         somaAlunos = somaAlunos + qtdAlunos;
         
+        System.out.println("Turma : " + turma);
+        System.out.println("Carga horaria : " + qtdHoras + " - Alunos " + qtdAlunos);
+        System.out.println("Acumulado Horas: " + somaHoras + " - Acumulado de alunos: " + somaAlunos);
+        System.out.println("--------------------------------\n");
         
     
     }

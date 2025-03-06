@@ -27,12 +27,13 @@ public class CursoCienciaDaComputacao {
         
             for(int contador = 1; contador <=3; contador++) {
             
-                System.out.println("Digite a carga horaria do curso" + contador);
+                System.out.println("Digite a carga horaria do curso " + contador);
                 qtdHoras = scan.nextInt();
                 
-                System.out.println("Digite a quantidade de alunos do curso" + contador);
+                System.out.println("Digite a quantidade de alunos do curso " + contador);
                 qtdAlunos = scan.nextInt();
             
+                aluno1.soma(contador, qtdHoras, qtdAlunos);
             }
         
     }
